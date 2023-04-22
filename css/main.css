@@ -1,0 +1,140 @@
+@font-face {
+  font-family: 'Roboto';
+  src: url("../assets/fonts/Roboto-Regular.woff2") format('woff2'),
+  url("../assets/fonts/Roboto-Regular.woff") format('woff');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+*,
+*:before,
+*:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  min-width: 320px;
+  font-size: 1rem;
+}
+
+textarea {
+  resize: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+}
+
+button {
+  display: block;
+  font-size: inherit;
+}
+
+button:hover {
+  cursor: pointer;
+}
+
+.container {
+  padding-top: 20px;
+  max-width: 1280px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Text input */
+.field {
+  width: 80%;
+}
+
+.field__text {
+  padding: 5px;
+  width: 100%;
+  border: 1px solid black;
+  font-size: 1.5rem;
+}
+
+/* Keyboard */
+.keyboard {
+  margin-top: 50px;
+  padding: 10px;
+}
+
+.keyboard__row {
+  display: flex;
+  column-gap: 10px;
+}
+
+.key {
+  position: relative;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #0278EE;
+  text-align: center;
+  color: #fff;
+}
+
+.keyboard__key {
+  width: 50px;
+}
+
+.keyboard__key-backspace {
+  width: 120px;
+}
+
+.keyboard__key-tab {
+  width: 65px;
+}
+
+.keyboard__key-del {
+  width: 55px;
+}
+
+.keyboard__key-caps {
+  width: 120px;
+}
+
+.keyboard__key-enter {
+  width: 100px;
+}
+
+.keyboard__key-shift-left {
+  width: 120px;
+}
+
+.keyboard__key-space {
+  width: 320px;
+}
+
+.keyboard__key-ctrl {
+  width: 100px;
+}
+
+.keyboard__key span:first-child {
+  position: absolute;
+  left: 4px;
+  top: 2px;
+  font-size: 0.75rem;
+}
