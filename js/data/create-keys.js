@@ -67,12 +67,12 @@ export default function createKeys() {
         ru: '+',
       },
       {
-        key: 'backspace',
+        special: 'backspace',
       },
     ],
     [
       {
-        key: 'tab',
+        special: 'tab',
       },
       {
         eng: 'q',
@@ -127,12 +127,12 @@ export default function createKeys() {
         ru: '/',
       },
       {
-        key: 'del',
+        special: 'del',
       }
     ],
     [
       {
-        key: 'Caps Lock',
+        special: 'capslock',
       },
       {
         eng: 'a',
@@ -179,12 +179,12 @@ export default function createKeys() {
         ru: 'э',
       },
       {
-        key: 'enter',
+        special: 'enter',
       }
     ],
     [
       {
-        key: 'shiftL',
+        special: 'shiftL',
       },
       {
         eng: 'z',
@@ -231,39 +231,39 @@ export default function createKeys() {
         ru: '\\',
       },
       {
-        key: '△',
+        special: 'top',
       },
       {
-        key: 'shiftR',
+        special: 'shift',
       }
     ],
     [
       {
-        key: 'Ctrl',
+        special: 'ctrl',
       },
       {
-        key: '⊞',
+        special: 'win',
       },
       {
-        key: 'Alt',
+        special: 'Alt',
       },
       {
-        key: 'Space',
+        special: 'space',
       },
       {
-        key: 'Alt',
+        special: 'Alt',
       },
       {
-        key: 'Ctrl',
+        special: 'ctrl',
       },
       {
-        key: '◁',
+        special: 'left',
       },
       {
-        key: '▽',
+        special: 'down',
       },
       {
-        key: '▷',
+        special: 'right',
       },
     ],
   ];
