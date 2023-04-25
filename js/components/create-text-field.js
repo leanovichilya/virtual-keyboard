@@ -9,6 +9,7 @@ export default function createTextField(container) {
   textarea.id = 'field-input';
   textarea.rows = 10;
 
-  container.append(field);
   field.append(label, textarea);
+
+  return field;
 }

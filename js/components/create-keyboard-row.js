@@ -6,40 +6,49 @@ export default function createKeyboardRow(lang, keys) {
   for (let i = 0; i < keys.length; i++) {
     let keyButton = createElement('button', 'key');
     let sub = createElement('span', 'keyboard__subkey');
-    let main = createElement('span', 'keyboard__mainkey');
 
     if (keys[i].key) {
-      main.textContent = keys[i].key;
+      keyButton.textContent = keys[i].key;
+      keyButton.dataset.special = keys[i].key;
     } else {
-      main.textContent = keys[i][lang[0]];
+      keyButton.textContent = keys[i][lang[0]];
+      keyButton.dataset.key = keys[i][lang[0]];
     }
 
     switch (keys[i].key) {
-      case 'Backspace':
+      case 'backspace':
         keyButton.classList.add('keyboard__key-backspace');
+        keyButton.textContent = 'Backspace';
         break;
-      case 'TAB':
+      case 'tab':
         keyButton.classList.add('keyboard__key-tab');
+        keyButton.textContent = keys[i].key.toUpperCase();
         break;
-      case 'DEL':
+      case 'del':
         keyButton.classList.add('keyboard__key-del');
+        keyButton.textContent = keys[i].key.toUpperCase();
         break;
       case 'Caps Lock':
         keyButton.classList.add('keyboard__key-caps');
         break;
-      case 'Enter':
+      case 'enter':
         keyButton.classList.add('keyboard__key-enter');
+        keyButton.textContent = 'Enter';
         break;
-      case 'ShiftL':
+      case 'shiftL':
         keyButton.classList.add('keyboard__key-shift-left');
-        main.textContent = 'Shift';
+        keyButton.textContent = 'Shift';
+        break;
+      case 'shiftR':
+        keyButton.classList.add('keyboard__key');
+        keyButton.textContent = 'Shift';
         break;
       case 'Ctrl':
         keyButton.classList.add('keyboard__key-ctrl');
         break;
       case 'Space':
         keyButton.classList.add('keyboard__key-space');
-        main.textContent = '';
+        keyButton.textContent = ' ';
         break;
       default:
         sub.dataset.language = lang[1];
@@ -48,7 +57,6 @@ export default function createKeyboardRow(lang, keys) {
         keyButton.append(sub);
     }
 
-    keyButton.append(main);
     row.append(keyButton);
   }
 

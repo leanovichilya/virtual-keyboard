@@ -3,7 +3,7 @@ export default function createKeys() {
     [
       {
         key: '~',
-        lang: '`',
+        eng: '`',
         ru: 'ё',
       },
       {
@@ -67,12 +67,12 @@ export default function createKeys() {
         ru: '+',
       },
       {
-        key: 'Backspace',
+        key: 'backspace',
       },
     ],
     [
       {
-        key: 'TAB',
+        key: 'tab',
       },
       {
         eng: 'q',
@@ -127,7 +127,7 @@ export default function createKeys() {
         ru: '/',
       },
       {
-        key: 'DEL',
+        key: 'del',
       }
     ],
     [
@@ -179,12 +179,12 @@ export default function createKeys() {
         ru: 'э',
       },
       {
-        key: 'Enter',
+        key: 'enter',
       }
     ],
     [
       {
-        key: 'ShiftL',
+        key: 'shiftL',
       },
       {
         eng: 'z',
@@ -234,7 +234,7 @@ export default function createKeys() {
         key: '△',
       },
       {
-        key: 'Shift',
+        key: 'shiftR',
       }
     ],
     [
