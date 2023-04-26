@@ -1,14 +1,14 @@
-import createKeys from '../data/create-keys.js';
+import createArrayRows from './create-array-rows.js';
 import createElement from './create-element.js';
-import createKeyboardRow from './create-keyboard-row.js';
 
 export default function createKeyboard(lang) {
-  const rows = [];
+  let rowsContainer = [];
 
-  createKeys().forEach((key) => {
-    const row = createKeyboardRow(lang, key);
-    rows.push(row);
+  createArrayRows(lang).forEach((rows) => {
+    let row = createElement('div', 'keyboard__row');
+    row.append(...rows);
+    rowsContainer.push(row);
   });
 
-  return rows;
+  return rowsContainer;
 }
