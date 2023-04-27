@@ -77,9 +77,6 @@ button:hover {
 /* Keyboard */
 .keyboard {
   margin-top: 50px;
-}
-
-.keyboard__container {
   padding: 10px;
   display: flex;
   flex-direction: column;
