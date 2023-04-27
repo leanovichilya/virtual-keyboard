@@ -8,11 +8,12 @@ import setSettings from './components/set-settings.js';
 document.addEventListener('DOMContentLoaded', () => {
   const container = createElement('div', 'container');
   const keyboard = createElement('div', 'keyboard');
-  const field = createTextField();
+  const field = createElement('div', 'field');
 
   setSettings(langs(), keyboard);
 
   document.body.append(container);
+  field.append(...createTextField());
   container.append(field);
   container.append(keyboard);
   switchLang(langs(), keyboard);

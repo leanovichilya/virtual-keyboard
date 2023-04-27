@@ -72,6 +72,7 @@ button:hover {
   width: 100%;
   border: 1px solid black;
   font-size: 1.5rem;
+  outline: none;
 }
 
 /* Keyboard */
@@ -97,6 +98,10 @@ button:hover {
   background-color: #0278EE;
   text-align: center;
   color: #fff;
+}
+
+.key:focus{
+  background-color: #004d40;
 }
 
 .keyboard__key {

@@ -1,15 +1,16 @@
 import createElement from './create-element.js';
 
-export default function createTextField(container) {
-  const field = createElement('div', 'field');
+export default function createTextField() {
+  let input = [];
   const label = createElement('label', 'field__label');
   const textarea = createElement('textarea', 'field__input');
 
   label.htmlFor = 'field-input';
   textarea.id = 'field-input';
   textarea.rows = 10;
+  textarea.autofocus = true;
 
-  field.append(label, textarea);
+  input.push(label, textarea);
 
-  return field;
+  return input;
 }
