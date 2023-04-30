@@ -100,11 +100,16 @@ button:hover {
   color: #fff;
 }
 
-.key:focus{
+.key:focus {
   background-color: #004d40;
 }
 
-.keyboard__key {
+.keyboard__key,
+.keyboard__key-alt,
+.keyboard__key-arrow,
+.keyboard__key-meta,
+.keyboard__key-alt,
+.keyboard__key-shift-right {
   width: 50px;
 }
 
