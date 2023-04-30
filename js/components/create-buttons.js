@@ -10,6 +10,7 @@ export default function createButtons(lang, keys) {
       let sub = createElement('span', 'keyboard__subkey');
 
       keyButton.dataset.code = rowsKey;
+      keyButton.type = 'button';
 
       if (typeof rows[rowsKey] === 'string') {
         keyButton.textContent = rows[rowsKey];

@@ -20,17 +20,33 @@ export default function checkSymbol(key, keys, sub, button, lang) {
     case 'ShiftLeft':
       classSpecialKey = '-shift-left';
       break;
-    case 'ControlLeft':
-      classSpecialKey = '-ctrl';
+    case 'ShiftRight':
+      classSpecialKey = '-shift-right';
       break;
+    case 'ControlLeft':
     case 'ControlRight':
       classSpecialKey = '-ctrl';
       break;
     case 'Space':
       classSpecialKey = '-space';
+      button.dataset.key = ' ';
+      break;
+    case 'AltLeft':
+    case 'AltRight':
+      classSpecialKey = '-alt';
+      break;
+    case 'ArrowUp':
+    case 'ArrowLeft':
+    case 'ArrowRight':
+    case 'ArrowDown':
+      classSpecialKey = '-arrow';
+      break;
+    case 'MetaLeft':
+      classSpecialKey = '-meta';
       break;
     default:
       button.textContent = keys.key || keys[lang[0]] || keys;
+      button.dataset.key = keys.key || keys[lang[0]];
       sub.textContent = keys[lang[1]];
       button.append(sub);
   }
