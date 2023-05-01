@@ -1,14 +1,21 @@
 import createElement from './create-element.js';
 
 export default function backlightButton(e) {
-  let span = createElement('span', 'key__backlight');
+  const span = createElement('span', 'key__backlight');
+  span.style.animationName = 'clickButton';
 
-  if (e.target.closest('.key')) {
+  if (e.type === 'click' && e.target.closest('.key')) {
     e.target.closest('.key').append(span);
-    span.style.animationName = 'clickButton';
-
-    setTimeout(() => {
-      span.remove();
-    }, 500);
+  } else {
+    const buttons = document.querySelectorAll('.key');
+    buttons.forEach((btn) => {
+      if (e.code === btn.dataset.code) {
+        btn.append(span);
+      }
+    });
   }
+
+  setTimeout(() => {
+    span.remove();
+  }, 500);
 }
