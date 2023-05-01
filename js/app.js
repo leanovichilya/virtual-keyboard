@@ -1,10 +1,10 @@
-import createTextField from './components/create-text-field.js';
-import createElement from './components/create-element.js';
-import setTextValue from './components/set-text-value.js';
+import createTextField from './functions/create-text-field.js';
+import createElement from './functions/create-element.js';
+import setTextValue from './functions/set-text-value.js';
 import setLanguage from './data/set-language.js';
-import switchLang from './components/switch-lang.js';
-import setSettings from './components/set-settings.js';
-import backlightButton from './components/backlight-button.js';
+import switchLang from './functions/switch-lang.js';
+import setSettings from './functions/set-settings.js';
+import backlightButtonClick from './functions/backlight-button.js';
 
 document.addEventListener('DOMContentLoaded', () => {
   const container = createElement('div', 'container');
@@ -21,6 +21,6 @@ document.addEventListener('DOMContentLoaded', () => {
   switchLang(setLanguage(), keyboard);
 
   keyboard.addEventListener('click', setTextValue);
-  keyboard.addEventListener('click', backlightButton);
+  keyboard.addEventListener('click', backlightButtonClick);
 });
 
