@@ -5,7 +5,6 @@ import setLanguage from './data/set-language.js';
 import switchLang from './functions/switch-lang.js';
 import setSettings from './functions/set-settings.js';
 import backlightButton from './functions/backlight-button.js';
-import focusInput from './functions/focus-input.js';
 import pressCapsLock from './functions/press-caps-lock.js';
 
 document.addEventListener('DOMContentLoaded', () => {
