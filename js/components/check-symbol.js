@@ -1,4 +1,4 @@
-export default function checkSymbol(key, keys, sub, button, lang) {
+export default function checkSymbol(key, keys, sub, button, lang, span) {
   let classSpecialKey = '';
 
   switch (key) {
@@ -45,9 +45,10 @@ export default function checkSymbol(key, keys, sub, button, lang) {
       classSpecialKey = '-meta';
       break;
     default:
-      button.textContent = keys.key || keys[lang[0]] || keys;
+      span.textContent = keys.key || keys[lang[0]] || keys;
       button.dataset.key = keys.key || keys[lang[0]];
       sub.textContent = keys[lang[1]];
+      button.append(span);
       button.append(sub);
   }
 
