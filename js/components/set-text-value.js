@@ -1,9 +1,8 @@
 export default function setTextValue(e) {
   const textInput = document.querySelector('#field-input');
 
-  console.log(e.target);
-
-  if (e.target.closest('button') && e.target.dataset.key) {
+  if (e.target.classList.contains('key__name') &&
+    e.target.closest('button').dataset.key) {
     textInput.value += e.target.closest('button').dataset.key;
   }
 };
