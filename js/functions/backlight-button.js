@@ -1,4 +1,3 @@
-import createElement from './create-element.js';
 import removeBacklight from './remove-backlight.js';
 import addBacklight from './add-backlight.js';
 import createBacklightSpan from './create-backlight-span.js';
