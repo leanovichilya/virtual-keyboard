@@ -241,13 +241,13 @@ export default function createKeys() {
         }
       },
       {
-        'KeyA': {
+        'Semicolon': {
           eng: ';',
           ru: 'ж',
         }
       },
       {
-        'Semicolon': {
+        'Quote': {
           eng: '\'',
           ru: 'э',
         }
