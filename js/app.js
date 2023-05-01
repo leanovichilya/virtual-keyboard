@@ -27,7 +27,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   keyboard.addEventListener('click', setTextValue);
   keyboard.addEventListener('click', backlightButton);
+  document.addEventListener('keydown', setTextValue);
   document.addEventListener('keydown', backlightButton);
-  document.addEventListener('keydown', focusInput);
 });
 
