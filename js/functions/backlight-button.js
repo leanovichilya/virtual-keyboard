@@ -10,6 +10,9 @@ export default function backlightButton(e) {
     const buttons = document.querySelectorAll('.key');
     buttons.forEach((btn) => {
       if (e.code === btn.dataset.code) {
+        if (e.code === 'Tab') {
+          e.preventDefault();
+        }
         btn.append(span);
       }
     });
