@@ -75,6 +75,8 @@ button:hover {
   font-size: 1.5rem;
   outline: none;
   border-radius: 10px;
+  background-color: #F9FBE7;
+  color: #00695C;
 }
 
 /* Keyboard */
@@ -103,7 +105,7 @@ button:hover {
   justify-content: center;
   background-color: #00ACC1;
   text-align: center;
-  color: #fff;
+  color: #F9FBE7;
   overflow: hidden;
   transition: background-color 0.3s;
   -webkit-border-radius: 6px;
