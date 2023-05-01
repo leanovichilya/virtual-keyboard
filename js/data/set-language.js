@@ -1,3 +1,3 @@
-export default function langs(){
+export default function setLanguage(){
   return ['eng', 'ru'];
 }
