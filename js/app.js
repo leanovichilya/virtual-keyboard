@@ -7,6 +7,7 @@ import setSettings from './functions/set-settings.js';
 import backlightButton from './functions/backlight-button.js';
 import pressCapsLock from './functions/press-caps-lock.js';
 import createNewLine from './functions/create-new-line.js';
+import deleteSymbol from './functions/delete-symbol.js';
 
 document.addEventListener('DOMContentLoaded', () => {
   const container = createElement('div', 'container');
@@ -27,7 +28,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
   keyboard.addEventListener('click', setTextValue);
   keyboard.addEventListener('click', backlightButton);
-  document.addEventListener('click', createNewLine)
+  keyboard.addEventListener('click', createNewLine)
+  keyboard.addEventListener('click', deleteSymbol);
   document.addEventListener('keydown', setTextValue);
   document.addEventListener('keydown', backlightButton);
 });
