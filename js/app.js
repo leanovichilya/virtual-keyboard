@@ -6,11 +6,13 @@ import switchLang from './functions/switch-lang.js';
 import setSettings from './functions/set-settings.js';
 import backlightButton from './functions/backlight-button.js';
 import focusInput from './functions/focus-input.js';
+import pressCapsLock from './functions/press-caps-lock.js';
 
 document.addEventListener('DOMContentLoaded', () => {
   const container = createElement('div', 'container');
   const keyboard = createElement('div', 'keyboard');
   const field = createElement('div', 'field');
+  let caps = false;
 
   setSettings(setLanguage(), keyboard);
 
@@ -25,5 +27,6 @@ document.addEventListener('DOMContentLoaded', () => {
   keyboard.addEventListener('click', backlightButton);
   document.addEventListener('keydown', backlightButton);
   document.addEventListener('keydown', focusInput);
+  pressCapsLock(caps);
 });
 
