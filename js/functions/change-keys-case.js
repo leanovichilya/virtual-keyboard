@@ -1,11 +1,9 @@
-export default function changeKeysCase(caps, keys, keysText, capsLock) {
-  if (caps) {
-    keys.forEach((key) => key.dataset.key = key.dataset.key.toUpperCase());
-    keysText.forEach((text) => text.textContent = text.textContent.toUpperCase());
-    capsLock.style.backgroundColor = '#F44336';
-  } else {
-    keys.forEach((key) => key.dataset.key = key.dataset.key.toLowerCase());
-    keysText.forEach((text) => text.textContent = text.textContent.toLowerCase());
-    capsLock.style.backgroundColor = '';
-  }
+export default function changeKeysCase(caps, keys) {
+  keys.forEach((key) => {
+    let dataKey = key.dataset.key;
+    let text = key.firstChild.textContent;
+
+    key.dataset.key = caps ? dataKey.toUpperCase() : dataKey.toLowerCase();
+    key.firstChild.textContent = caps ? text.toUpperCase() : text.toLowerCase();
+  });
 };

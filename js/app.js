@@ -13,6 +13,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const keyboard = createElement('div', 'keyboard');
   const field = createElement('div', 'field');
   let caps = false;
+  let shift = false;
 
   setSettings(setLanguage(), keyboard);
 
@@ -22,11 +23,11 @@ document.addEventListener('DOMContentLoaded', () => {
   container.append(keyboard);
 
   switchLang(setLanguage(), keyboard);
+  pressCapsLock(caps, shift);
 
   keyboard.addEventListener('click', setTextValue);
   keyboard.addEventListener('click', backlightButton);
   document.addEventListener('keydown', backlightButton);
   document.addEventListener('keydown', focusInput);
-  pressCapsLock(caps);
 });
 
