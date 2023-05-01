@@ -162,6 +162,7 @@ button:hover {
 
 .keyboard__key-caps {
   width: 120px;
+  transition: background-color 0.5s;
 }
 
 .keyboard__key-enter {

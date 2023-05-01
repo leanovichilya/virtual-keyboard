@@ -1,18 +1,28 @@
-export default function pressCapsLock(caps) {
-  let keys = document.querySelectorAll('button[data-key]');
-  let keysText = Array.from(keys).map((key) => key.querySelector('.key__name'));
+import changeKeysCase from './change-keys-case.js';
 
+export default function pressCapsLock(caps, shift) {
   document.addEventListener('keydown', (e) => {
+    let keys = document.querySelectorAll('button[data-key]');
+    let capsLock = document.querySelector('button[data-code="CapsLock"]');
+
     if (e.code === 'CapsLock') {
       caps = !caps;
+      changeKeysCase(caps, keys);
+    }
 
-      if (caps) {
-        keys.forEach((key) => key.dataset.key = key.dataset.key.toUpperCase());
-        keysText.forEach((text) => text.textContent = text.textContent.toUpperCase());
-      } else {
-        keys.forEach((key) => key.dataset.key = key.dataset.key.toLowerCase());
-        keysText.forEach((text) => text.textContent = text.textContent.toLowerCase());
-      }
+    if (e.key === 'Shift') {
+      shift = !shift;
+      changeKeysCase(shift, keys);
+    }
+
+    capsLock.style.backgroundColor = caps ? '#F44336' : '';
+  });
+
+  document.addEventListener('keyup', (e) => {
+    let keys = document.querySelectorAll('button[data-key]');
+    if (e.key === 'Shift') {
+      shift = !shift;
+      changeKeysCase(shift, keys);
     }
   });
 };
