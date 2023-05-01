@@ -41,6 +41,7 @@ body {
   height: 100vh;
   font-family: "Roboto", sans-serif;
   font-weight: 400;
+  background-color: #E0F7FA;
 }
 
 button {
@@ -54,7 +55,7 @@ button:hover {
 
 .container {
   padding-top: 20px;
-  max-width: 900px;
+  max-width: 920px;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
@@ -73,15 +74,20 @@ button:hover {
   border: 1px solid black;
   font-size: 1.5rem;
   outline: none;
+  border-radius: 10px;
 }
 
 /* Keyboard */
 .keyboard {
-  margin-top: 50px;
+  margin-top: 20px;
   padding: 10px;
   display: flex;
   flex-direction: column;
   row-gap: 10px;
+  border: 1px solid #0097A7;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
 }
 
 .keyboard__row {
@@ -100,6 +106,9 @@ button:hover {
   color: #fff;
   overflow: hidden;
   transition: background-color 0.3s;
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  border-radius: 6px;
 }
 
 .key__name {
