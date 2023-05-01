@@ -5,6 +5,7 @@ import setLanguage from './data/set-language.js';
 import switchLang from './functions/switch-lang.js';
 import setSettings from './functions/set-settings.js';
 import backlightButton from './functions/backlight-button.js';
+import focusInput from './functions/focus-input.js';
 
 document.addEventListener('DOMContentLoaded', () => {
   const container = createElement('div', 'container');
@@ -22,6 +23,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   keyboard.addEventListener('click', setTextValue);
   keyboard.addEventListener('click', backlightButton);
+  document.addEventListener('keydown', focusInput);
   document.addEventListener('keydown', backlightButton);
 });
 
